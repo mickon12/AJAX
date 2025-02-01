@@ -5,7 +5,7 @@ if (xmlHttp==null){
  alert ("Browser ne podržava xmlHttpRequest");
  return;
 }
-var url="prikazidrzavu.php";
+var url="pkikazidrzavu.php";
 url=url+"?id="+str;
 //ne dozvoli keširanje
 url=url+"&sid="+Math.random();
@@ -34,3 +34,4 @@ try{
  }
 return xmlHttp;
 }
+
