@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                        VALUES ('$drzava', '$narod', '$glgrad', $brstanovnika, '$kontinent', 0)";
 
         if ($conn->query($sql_insert) === TRUE) {
-            header("Location: ../01.Primer/index.php");
+            header("Location: ../05.Primer/index.php");
             exit();
         } else {
             echo "Greška: " . $conn->error;
