@@ -10,7 +10,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#kombo_feed").change(function(){
-                var vrednost = $("#kombo_feed").val();
+                var vrednost = $(this).val();
                 $.get("getrss.php", {feed: vrednost}, function(data){
                     $("#rssOutput").html(data);
                 });
@@ -20,15 +20,14 @@
 </head>
 <body>
     <form> 
-        Odaberi RSS-Feed:
-        <select onchange="showRSS(this.value)">
+        <label for="kombo_feed">Odaberi RSS-Feed:</label>
+        <select id="kombo_feed">
             <option value="B92">B92</option>
             <option value="RTS">RTS</option>
         </select>
     </form>
-    <p><div id="rssOutput">
+    <div id="rssOutput">
         <b>RSS Feed će biti prikazan u ovom delu.</b>
-    </div></p>
-
+    </div>
 </body>
 </html>
